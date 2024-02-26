@@ -1,13 +1,11 @@
 import Page from "./Page";
-import { useWeather } from "./hooks";
+import { WeatherProvider } from "./provider";
 
 const App = () => {
-  const { weatherData } = useWeather();
-  console.log(weatherData);
   return (
-    <div>
+    <WeatherProvider>
       <Page />
-    </div>
+    </WeatherProvider>
   );
 };
 
